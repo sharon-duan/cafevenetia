@@ -1,0 +1,122 @@
+.social-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: .7em;
+  padding: 1em;
+}
+
+.social-bar div {
+  padding: 1em;
+  width: .5em;
+  height: .5em;
+  border: 1px solid #333;
+  border-radius: 100%;
+  display: inline-block;
+  margin: .5em;
+}
+
+.social-bar div i {
+  font-size: 1.5em;
+  position: relative;
+  bottom: 0.45em;
+  right: .36em;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.logo img {
+  width: 18%;
+  min-width: 11em;
+}
+
+.slogan {
+  text-align: center;
+  padding-top: 0.6em;
+}
+
+.menu {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.menu div {
+  display: inline-block;
+  padding: 1em;
+  margin: 0em 5%;
+  cursor: pointer;
+}
+
+.menu div:hover {
+  background: #eee;
+}
+
+.menu div.active {
+  background: #5D4A44;
+}
+
+.menu div.active a {
+  color: white;
+}
+
+.menu div a {
+  text-decoration: none;
+}
+
+.content {
+  padding: 2em 0;
+}
+
+.picture {
+  max-height: 20em;
+  overflow: hidden;
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+}
+
+.about {
+  background: #D8AE6E;
+  color: white;
+  margin-top: 2em;
+}
+
+.about h4 {
+  text-align: center;
+  padding-top: 0.6em;
+}
+
+.about p {
+  padding: 1em 12%;
+  line-height: 2em;
+}
+
+.partner h4 {
+  text-align: center;
+}
+
+.address h4 {
+  text-align: center;
+}
+
+.address h5 {
+  font-weight: normal;
+}
+
+.address .one {
+  padding: 1em;
+  max-width: 16em;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 0.8em;
+  color: #999;
+}
