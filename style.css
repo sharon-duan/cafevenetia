@@ -1,3 +1,14 @@
+html {
+  background: #4C3A20;
+}
+
+body {
+  max-width: 950px;
+  margin: auto;
+  background: white;
+  position: relative;
+}
+
 .social-bar {
   position: absolute;
   right: 0;
