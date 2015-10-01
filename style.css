@@ -55,27 +55,36 @@ body {
   font-size: 1.2em;
 }
 
-.menu div {
+.menu a {
   display: inline-block;
   padding: 1em;
   margin: 0em 5%;
   cursor: pointer;
-}
-
-.menu div:hover {
-  background: #eee;
-}
-
-.menu div.active {
-  background: #5D4A44;
-}
-
-.menu div.active a {
-  color: white;
-}
-
-.menu div a {
   text-decoration: none;
+  position: relative;
+  color: #5D4A44;
+}
+
+.menu a::before {
+  content: "";
+  background-image: url(img/coffeebean.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.4em;
+  height: 1.4em;
+  display: block;
+  position: absolute;
+  top: 1.4em;
+  left: -0.6em;
+}
+
+.menu a.active {
+  color: #A24238;
+}
+
+.menu a.active::before {
+  background-image: url(img/coffeemug.png);
+  top: 0.8em;
 }
 
 .content {
@@ -106,6 +115,11 @@ body {
 .about p {
   padding: 1em 12%;
   line-height: 2em;
+}
+
+.about p::selection {
+  background: #CE9797;
+  color: #EFD1A5;
 }
 
 .partner h4 {

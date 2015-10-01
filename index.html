@@ -39,9 +39,9 @@
   </h5>
 
   <div class="menu" data-toggle="pill">
-    <div role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></div>
-    <div role="presentation"><a href="#menu" role="tab" data-toggle="tab">Menu</a></div>
-    <div role="presentation"><a href="#shop" aria-controls="shop" role="tab" data-toggle="tab">Shop</a></div>
+    <a href="#about" aria-controls="about" role="tab" data-toggle="tab" class="active">About</a>
+    <a href="#menu" role="tab" data-toggle="tab">Menu</a>
+    <a href="#shop" aria-controls="shop" role="tab" data-toggle="tab">Shop</a>
   </div>
 
   <div class="content tab-content">
@@ -49,7 +49,7 @@
     <div role="tabpanel" class="tab-pane active" id="about">
 
       <div class="picture">
-        <img src="http://www.cafevenetia.com/uploads/2/5/7/3/25735336/_1397640328.jpg" alt="Various photos of Cafe Venetia" />
+        <img src="img/shoppic.jpg" alt="Various photos of Cafe Venetia" />
       </div>
 
       <div class="about">
@@ -136,6 +136,13 @@
   <footer>
     <div>&copy; 2015 Café Venetia. All Rights Reserved.</div>
   </footer>
+
+  <script>
+    $('.menu a').on('click', function() {
+      $('.menu a').removeClass('active');
+      $(this).addClass('active');
+    });
+  </script>
 
   </body>
 </html>
