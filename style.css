@@ -78,6 +78,10 @@ body {
   left: -0.6em;
 }
 
+h4 {
+  font-weight: 500;
+}
+
 .menu a.active {
   color: #A24238;
 }
@@ -105,17 +109,21 @@ body {
   background: #D8AE6E;
   color: white;
   margin-top: 2em;
+  padding-bottom: 0.8em;
+  margin-bottom: 1em;
 }
 
 .about h4 {
   text-align: center;
   padding-top: 0.6em;
+  color: white;
 }
 
 .about p {
-  padding: 1em 12%;
-  line-height: 2em;
+  padding: 0.2em 8.5%;
+  line-height: 1.6em;
   font-weight: 300;
+  font-size: 0.75em;
 }
 
 .about p::selection {
@@ -125,6 +133,7 @@ body {
 
 .partner h4 {
   text-align: center;
+  margin-bottom: 2em;
 }
 
 .address h4 {
@@ -137,8 +146,14 @@ body {
 
 .address .one {
   padding: 1em;
-  max-width: 16em;
+  max-width: 17em;
   margin: auto;
+  font-size: 0.8em;
+}
+
+.address .schedule {
+  color: #BF3B23;
+  padding-top: 1.3em;
 }
 
 #menu h2 {
