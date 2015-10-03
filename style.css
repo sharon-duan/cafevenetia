@@ -7,7 +7,7 @@ body {
   margin: auto;
   background: white;
   position: relative;
-  font-family: "Open Sans";
+  font-family: "Josefin Sans";
 }
 
 .social-bar {
@@ -74,7 +74,7 @@ body {
   height: 1.4em;
   display: block;
   position: absolute;
-  top: 1.4em;
+  top: 1.3em;
   left: -0.6em;
 }
 
@@ -88,7 +88,7 @@ h4 {
 
 .menu a.active::before {
   background-image: url(img/coffeemug.png);
-  top: 0.8em;
+  top: 0.7em;
 }
 
 .content {
@@ -123,7 +123,7 @@ h4 {
   padding: 0.2em 8.5%;
   line-height: 1.6em;
   font-weight: 300;
-  font-size: 0.75em;
+  font-size: 0.85em;
 }
 
 .about p::selection {
@@ -148,7 +148,7 @@ h4 {
   padding: 1em;
   max-width: 17em;
   margin: auto;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .address .schedule {
@@ -168,16 +168,20 @@ h4 {
 }
 
 #menu h3 {
-  font-size: 0.8em;
-  font-weight: 300;
+  font-size: 0.9em;
+  font-weight: 400;
   text-align: center;
   margin-top: -0.5em;
+  color: #aaa;
 }
 
 #menu .item {
-  max-width: 22em;
-  margin: auto;
-  padding: 1.2em 1em;
+  font-style: normal;
+  font-size: 0.85em;
+  display: block;
+  position: absolute;
+  padding-top: 0.2em;
+  color: #aaa;
 }
 
 #menu .item strong {
