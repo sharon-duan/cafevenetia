@@ -176,12 +176,9 @@ h4 {
 }
 
 #menu .item {
-  font-style: normal;
-  font-size: 0.85em;
-  display: block;
-  position: absolute;
-  padding-top: 0.2em;
-  color: #aaa;
+  max-width: 22em;
+  margin: auto;
+  padding: 1.2em 1em;
 }
 
 #menu .item strong {
@@ -194,12 +191,12 @@ h4 {
 }
 
 #menu .item i {
-  font-weight: 300;
   font-style: normal;
-  font-size: 0.8em;
+  font-size: 0.85em;
   display: block;
   position: absolute;
   padding-top: 0.2em;
+  color: #aaa;
 }
 
 #menu .column-group > div {
