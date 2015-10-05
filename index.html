@@ -32,6 +32,11 @@
     <div><i class="fa fa-twitter"></i></div>
   </div>
 
+  <div class="cart">
+    <img src="img/shopping.jpg">
+    <span>0</span>
+  </div>
+
   <div class="logo">
     <img src="img/logo.png" alt="Cafe Venetia Logo" />
   </div>
@@ -139,25 +144,25 @@
         <div class="column-group gutters">
           <div class="all-50 tiny-100 small-100">
             <h2>i Bianchi</h2>
-            <div class="item"><strong>Cappuccino</strong><span>3.65</span></div>
+            <div class="item"><strong class="item-name">Cappuccino</strong><span>3.65</span></div>
             <div class="item">
-              <strong>Cappuccino Viennese</strong><span>4.25</span><i>with whipped cream and chocolate shavings</i>
+              <strong class="item-name">Cappuccino Viennese</strong><span>4.25</span><i>with whipped cream and chocolate shavings</i>
             </div>
-            <div class="item"><strong>Latte Macchiato</strong><span>3.85</span></div>
+            <div class="item"><strong class="item-name">Latte Macchiato</strong><span>3.85</span></div>
             <div class="item">
-              <strong>Macchiatone</strong><span>3.40</span><i>with half the milk of a cappuccino</i>
+              <strong class="item-name">Macchiatone</strong><span>3.40</span><i>with half the milk of a cappuccino</i>
             </div>
             <div class="item">
-              <strong>Marocchino</strong><span>3.40</span><i>with half the milk of a capuccinno,<br />cocoa powder and chocolate shavings</i>
+              <strong class="item-name">Marocchino</strong><span>3.40</span><i>with half the milk of a capuccinno,<br />cocoa powder and chocolate shavings</i>
             </div>
           </div>
           <div class="all-50 tiny-100 small-100">
             <h2>i Neri</h2>
-            <div class="item"><strong>Espresso</strong><span>2.40</span></div>
-            <div class="item"><strong>Espresso Macchiato</strong><span>2.65</span></div>
-            <div class="item"><strong>Drip Coffee</strong><span>2.50</span></div>
-            <div class="item"><strong>French Press</strong><span>4.50</span></div>
-            <div class="item"><strong>Caffè Freddo</strong><span>3.75</span></div>
+            <div class="item"><strong class="item-name">Espresso</strong><span>2.40</span></div>
+            <div class="item"><strong class="item-name">Espresso Macchiato</strong><span>2.65</span></div>
+            <div class="item"><strong class="item-name">Drip Coffee</strong><span>2.50</span></div>
+            <div class="item"><strong class="item-name">French Press</strong><span>4.50</span></div>
+            <div class="item"><strong class="item-name">Caffè Freddo</strong><span>3.75</span></div>
           </div>
         </div>
         <div class="column-group gutters">
@@ -172,16 +177,16 @@
             <h2>la Cioccolata</h2>
             <h3>hot chocolate selection with espresso optional</h3>
             <div class="item">
-              <strong>Cioccolata in Tazza</strong><span>4.00</span><i>drinking mil based hot chocolate</i>
+              <strong class="item-name">Cioccolata in Tazza</strong><span>4.00</span><i>drinking mil based hot chocolate</i>
             </div>
             <div class="item">
-              <strong>Cioccolata Fondente</strong><span>4.75</span><i>thick milk based hot chocolate</i>
+              <strong class="item-name">Cioccolata Fondente</strong><span>4.75</span><i>thick milk based hot chocolate</i>
             </div>
             <div class="item">
-              <strong>Mousse al Cioccolato</strong><span>5.25</span><i>thick cream based hot chocolate</i>
+              <strong class="item-name">Mousse al Cioccolato</strong><span>5.25</span><i>thick cream based hot chocolate</i>
             </div>
             <div class="item">
-              <strong>Chocospice</strong><span>4.50</span><i>hot chocolate spiced with cinnamon,<br>cardamom, or pink pepper</i>
+              <strong class="item-name">Chocospice</strong><span>4.50</span><i>hot chocolate spiced with cinnamon,<br>cardamom, or pink pepper</i>
             </div>
           </div>
         </div>
@@ -207,7 +212,7 @@
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
                   <div class="head">
-                    <h3>Miscela Cinque (1lb)</h3>
+                    <h3 class="item-name">Miscela Cinque (1lb)</h3>
                     <div class="desc">arabica and robusta from Brasil, and India</div>
                     <div class="red">intense, dark chocolate, creamy</div>
                   </div>
@@ -216,7 +221,7 @@
                     <div class="quantity">Quantity</div>
                     <div>
                       <input type="number" value="1">
-                      <input type="button" value="Add to cart">
+                      <input type="button" value="Add to cart" class="add-to-cart">
                     </div>
                   </div>
                 </div>
@@ -225,7 +230,7 @@
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
                   <div class="head">
-                    <h3>Miscela Uno (1lb)</h3>
+                    <h3 class="item-name">Miscela Uno (1lb)</h3>
                     <div class="desc">arabica blend from Ethiopia, Brasil, Tanzania, Costa Rica and Columbia</div>
                     <div class="red">fruity, intense floral, smooth</div>
                   </div>
@@ -234,7 +239,7 @@
                     <div class="quantity">Quantity</div>
                     <div>
                       <input type="number" value="1">
-                      <input type="button" value="Add to cart">
+                      <input type="button" value="Add to cart" class="add-to-cart">
                     </div>
                   </div>
                 </div>
@@ -245,7 +250,7 @@
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
                   <div class="head">
-                    <h3>Miscela Zero (1lb)</h3>
+                    <h3 class="item-name">Miscela Zero (1lb)</h3>
                     <div class="desc">decaffeinated arabica blend from Brasil, Columbia, and India</div>
                     <div class="red">creamy, dense, rich</div>
                   </div>
@@ -254,7 +259,7 @@
                     <div class="quantity">Quantity</div>
                     <div>
                       <input type="number" value="1">
-                      <input type="button" value="Add to cart">
+                      <input type="button" value="Add to cart" class="add-to-cart">
                     </div>
                   </div>
                 </div>
@@ -269,26 +274,26 @@
             <div class="column-group">
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Brasile - sul de minas (1lb)</h3>
+                  <h3 class="item-name">Brasile - sul de minas (1lb)</h3>
                   <div class="red">mellow, nutty, clean</div>
                   <div class="topspace">Price: $21</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
 
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Columbia - caldas, risaraida, and quindio (1lb)</h3>
+                  <h3 class="item-name">Columbia - caldas, risaraida, and quindio (1lb)</h3>
                   <div class="red">cherry, cocoa, sweet</div>
                   <div class="topspace">Price: $22</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
@@ -297,26 +302,26 @@
             <div class="column-group">
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Costa Rica - terrazù (1lb)</h3>
+                  <h3 class="item-name">Costa Rica - terrazù (1lb)</h3>
                   <div class="red">citrus, almond, spiced chocolate</div>
                   <div class="topspace">Price: $22</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
 
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Etiopia - sidamo (1lb)</h3>
+                  <h3 class="item-name">Etiopia - sidamo (1lb)</h3>
                   <div class="red">intense, berry, cinamon</div>
                   <div class="topspace">Price: $22</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
@@ -325,26 +330,26 @@
             <div class="column-group">
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Guatemala - huehuetenango (1lb)</h3>
+                  <h3 class="item-name">Guatemala - huehuetenango (1lb)</h3>
                   <div class="red">smooth, pepper, white chocolate</div>
                   <div class="topspace">Price: $22</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
 
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Honduras - montagna campera (1lb)</h3>
+                  <h3 class="item-name">Honduras - montagna campera (1lb)</h3>
                   <div class="red">rich, complex, cocoa</div>
                   <div class="topspace">Price: $21</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
@@ -353,26 +358,26 @@
             <div class="column-group">
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Nicaragua - matagara, jinotega, nuova segovia (1lb)</h3>
+                  <h3 class="item-name">Nicaragua - matagara, jinotega, nuova segovia (1lb)</h3>
                   <div class="red">delicate, floral, spice</div>
                   <div class="topspace">Price: $21</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
 
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Tanzania - burka estate (1lb)</h3>
+                  <h3 class="item-name">Tanzania - burka estate (1lb)</h3>
                   <div class="red">rich, complex, cocoa</div>
                   <div class="topspace">Price: $22</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
@@ -381,13 +386,13 @@
             <div class="column-group">
               <div class="all-50 tiny-100 small-100">
                 <div class="item">
-                  <h3>Republica Dominicana - santo domingo barahona (1lb)</h3>
+                  <h3 class="item-name">Republica Dominicana - santo domingo barahona (1lb)</h3>
                   <div class="red">toasted cereal, tabacco, hazelnut</div>
                   <div class="topspace">Price: $22</div>
                   <div class="quantity">Quantity</div>
                   <div>
                     <input type="number" value="1">
-                    <input type="button" value="Add to cart">
+                    <input type="button" value="Add to cart" class="add-to-cart">
                   </div>
                 </div>
               </div>
@@ -411,7 +416,7 @@
             <div class="quantity">Quantity</div>
             <div>
               <input type="number" value="1">
-              <input type="button" value="Add to cart">
+              <input type="button" value="Add to cart" class="add-to-cart" class="add-to-cart">
             </div>
           </div>
         </div>
@@ -425,7 +430,7 @@
             <div class="quantity">Quantity</div>
             <div>
               <input type="number" value="1">
-              <input type="button" value="Add to cart">
+              <input type="button" value="Add to cart" class="add-to-cart">
             </div>
           </div>
         </div>
@@ -440,6 +445,8 @@
   </footer>
 
   <script>
+    var cart = [];
+
     $('.main.menu a').on('click', function() {
       $('.main.menu a').removeClass('active');
       $(this).addClass('active');
@@ -458,6 +465,61 @@
       $('#giftcards .topspace input').removeClass('active');
       $(this).addClass('active');
     });
+
+    $('.add-to-cart').on('click', function() {
+      var $input = $(this);
+      var item, name, quantity;
+
+      if ($input.parents('#coffeebeans').length) {
+        item = $input.parents('.item');
+        name = item.find('.item-name').text();
+        quantity = +item.find('input[type="number"]').val() || 0;
+      } else if ($input.parents('#giftcards').length) {
+        item = $input.parents('.price');
+        name = item.find('input[type="button"].active').val() + ' Gift Card';
+        quantity = +item.find('input[type="number"]').val() || 0;
+      } else if ($input.parents('#accessories').length) {
+        item = $input.parents('.price');
+        name = 'Café Venetia Bag';
+        quantity = +item.find('input[type="number"]').val() || 0;
+      }
+      addToCart({name: name, quantity: quantity});
+    });
+
+    function addToCart(item) {
+      // Add item
+      cart.push(item);
+
+      // Notify user
+      $('.notification').fadeOut();
+      var $notif = $('<div class="notification"><span></span></div>');
+      $notif.find('span').text(item.name + ' x ' + item.quantity + ' added to cart');
+      $notif.appendTo('html');
+      $notif.animate({top: '0em'}, 300, function() {
+        setTimeout(function() {
+          $notif.animate({top: '-3.1em'}, 300, function() {
+            $notif.remove();
+          });
+        }, 2000);
+      });
+
+      // Refresh cart
+      var items = {};
+      cart.forEach(function(item) {
+        var name     = item.name;
+        var quantity = +item.quantity;
+
+        items[name] = items[name] || {};
+        items[name].quantity = items[name].quantity || 0;
+        items[name].quantity += +quantity;
+      });
+
+      var totalNumber = 0;
+      Object.keys(items).forEach(function (key) {
+        totalNumber += items[key].quantity;
+      });
+      $('.cart span').text(totalNumber);
+    }
   </script>
 
   </body>
