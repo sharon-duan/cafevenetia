@@ -49,6 +49,7 @@
     <a href="#about" role="tab" data-toggle="tab" class="active">About</a>
     <a href="#menu" role="tab" data-toggle="tab">Menu</a>
     <a href="#shop" role="tab" data-toggle="tab">Shop</a>
+    <a href="#checkout" role="tab" data-toggle="tab" style="position: absolute; left: -10000px"></a>
   </div>
 
   <div class="content tab-content">
@@ -436,6 +437,23 @@
         </div>
       </div>
     </div>
+
+    <div role="tabpanel" class="tab-pane" id="checkout">
+      <h2>Shopping Cart</h2>
+      <table class="checkout-list">
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </table>
+
+      <div class="finally">
+        <a>Continue shopping</a>
+        <input class="checkout-btn" type="button" value="Check Out">
+      </div>
+    </div>
   </div>
 
   <hr />
@@ -466,24 +484,75 @@
       $(this).addClass('active');
     });
 
+    $('.cart').on('click', function() {
+      var $list = $('.checkout-list');
+      $list.find('tr:not(:first-child)').remove();
+      $list.css('display', 'table');
+      $('.checkout-btn').css('opacity', 1);
+      $('.empty-cart').remove();
+
+      if (cart.length === 0) {
+        $list.css('display', 'none');
+        $('.checkout-btn').css('opacity', 0);
+        $('#checkout h2').after('<div class="empty-cart">You cart is empty</div>');
+        $('.main.menu a[href="#checkout"]').click();
+        return;
+      }
+
+      var subtotal = 0;
+      cart.forEach(function(item, i) {
+        var $line = $('<tr>');
+        $('<td>').text(item.name).appendTo($line);
+        var $td = $('<td>').appendTo($line);
+        $('<input type="number">').val(item.quantity).appendTo($td);
+
+        $line.find('input[type="number"]').on('change', function() {
+          item.quantity = +$(this).val();
+          $('.cart').click();
+        });
+
+        $('<td>').text('$' + item.price).appendTo($line);
+        $('<td class="delete">').text('Delete').appendTo($line);
+
+        $line.find('.delete').on('click', function() {
+          cart.splice(i, 1);
+          $('.cart').click();
+        });
+
+        $line.appendTo($list);
+        subtotal += item.price * item.quantity;
+      });
+
+      $list.append('<tr><td></td><td style="text-align: right">Subtotal</td><td><strong>$' + subtotal + '</strong></td><td></td>');
+
+      $('.main.menu a[href="#checkout"]').click();
+    });
+
+    $('.finally a').on('click', function() {
+      $('a[href="#shop"]').click();
+    });
+
     $('.add-to-cart').on('click', function() {
       var $input = $(this);
-      var item, name, quantity;
+      var item, name, price, quantity;
 
       if ($input.parents('#coffeebeans').length) {
         item = $input.parents('.item');
         name = item.find('.item-name').text();
+        price = +item.find('.topspace').text().match(/.*\$([0-9.]*)/)[1]
         quantity = +item.find('input[type="number"]').val() || 0;
       } else if ($input.parents('#giftcards').length) {
         item = $input.parents('.price');
         name = item.find('input[type="button"].active').val() + ' Gift Card';
+        price = item.find('input[type="button"].active').val().match(/.*\$([0-9.]*)/)[1];
         quantity = +item.find('input[type="number"]').val() || 0;
       } else if ($input.parents('#accessories').length) {
         item = $input.parents('.price');
         name = 'Café Venetia Bag';
+        price = 10;
         quantity = +item.find('input[type="number"]').val() || 0;
       }
-      addToCart({name: name, quantity: quantity});
+      addToCart({name: name, price: price, quantity: quantity});
     });
 
     function addToCart(item) {
@@ -508,11 +577,20 @@
       cart.forEach(function(item) {
         var name     = item.name;
         var quantity = +item.quantity;
+        var price    = +item.price;
 
         items[name] = items[name] || {};
+        items[name].price    = price;
         items[name].quantity = items[name].quantity || 0;
         items[name].quantity += +quantity;
       });
+
+      cart = [];
+      Object.keys(items).forEach(function(name) {
+        cart.push({name: name, price: items[name].price, quantity: items[name].quantity});
+      });
+
+      cart = cart.sort(function(a, b) { return a.name >= b.name; });
 
       var totalNumber = 0;
       Object.keys(items).forEach(function (key) {
