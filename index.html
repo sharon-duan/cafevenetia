@@ -1,5 +1,7 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
     <title>Cafe Venetia Project</title>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -198,7 +200,6 @@
 
       <div class="menu" data-toggle="pill">
         <a href="#coffeebeans" role="tab" data-toggle="tab" class="active">Coffe Beans</a>
-        <a href="#giftcards" role="tab" data-toggle="tab">Gift Cards</a>
         <a href="#accessories" role="tab" data-toggle="tab">Accessories</a>
       </div>
 
@@ -403,25 +404,6 @@
           </div>
         </div>
 
-        <div role="tabpanel" class="tab-pane active" id="giftcards">
-          <img src="img/giftcard.jpg">
-          <div class="price">
-            <div class="topspace">
-              <span>Price:</span>
-              <input type="button" value="$20" class="active">
-              <input type="button" value="$40">
-              <input type="button" value="$60">
-              <input type="button" value="$80">
-              <input type="button" value="$100">
-            </div>
-            <div class="quantity">Quantity</div>
-            <div>
-              <input type="number" value="1">
-              <input type="button" value="Add to cart" class="add-to-cart" class="add-to-cart">
-            </div>
-          </div>
-        </div>
-
         <div role="tabpanel" class="tab-pane active" id="accessories">
           <img src="img/bag.jpg">
           <div class="price">
@@ -476,11 +458,6 @@
 
     $('#shop .menu a').on('click', function() {
       $('#shop .menu a').removeClass('active');
-      $(this).addClass('active');
-    });
-
-    $('#giftcards .topspace input').on('click', function() {
-      $('#giftcards .topspace input').removeClass('active');
       $(this).addClass('active');
     });
 
@@ -540,11 +517,6 @@
         item = $input.parents('.item');
         name = item.find('.item-name').text();
         price = +item.find('.topspace').text().match(/.*\$([0-9.]*)/)[1]
-        quantity = +item.find('input[type="number"]').val() || 0;
-      } else if ($input.parents('#giftcards').length) {
-        item = $input.parents('.price');
-        name = item.find('input[type="button"].active').val() + ' Gift Card';
-        price = item.find('input[type="button"].active').val().match(/.*\$([0-9.]*)/)[1];
         quantity = +item.find('input[type="number"]').val() || 0;
       } else if ($input.parents('#accessories').length) {
         item = $input.parents('.price');

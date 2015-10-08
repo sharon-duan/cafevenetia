@@ -344,36 +344,13 @@ input[type="button"] {
   color: #A14137;
 }
 
-#giftcards img {
-  width: 100%;
-  padding: 0em 2em 1em 3em;
-}
-
 #accessories img {
   width: 18em;
   padding: 0em 2em 1em 2em;
 }
 
-#giftcards .price, #accessories .price {
+#accessories .price {
   padding-left: 3em;
-}
-
-#giftcards .topspace input {
-  padding: 4px;
-  width: 3em;
-  margin-left: 1.1em;
-  border: 1px solid transparent;
-}
-
-#giftcards .topspace input:not(.active) {
-  background: white;
-  color: #333;
-  border-color: rgba(161,65,55,0.4);
-}
-
-#giftcards, #accessories div {
-  font-size: 15px;
-  color: #333;
 }
 
 .delete {
