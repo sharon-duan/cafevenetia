@@ -13,6 +13,7 @@ body {
   border-top     : 0;
   border-top     : 0;
   letter-spacing : 0.4px;
+  color          : #333;
 }
 
 hr {
@@ -38,11 +39,16 @@ hr {
 }
 
 .social-bar {
-  position  : absolute;
-  right     : 0;
-  top       : 0;
-  font-size : .7em;
-  padding   : 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: .7em;
+  padding: 1em;
+  margin-right: 5.2em;
+}
+
+.social-bar a {
+  color: #333;
 }
 
 .social-bar div {
@@ -56,18 +62,20 @@ hr {
 }
 
 .social-bar div i {
-  font-size : 1.5em;
-  position  : relative;
-  bottom    : 0.45em;
-  right     : .36em;
+  font-size: 1.3em;
+  position: relative;
+  bottom: 7px;
+  right: 7px;
 }
 
 .cart {
-  color    : #A14137;
-  position : absolute;
-  top      : 9.7em;
-  right    : 1vw;
-  cursor   : pointer;
+  color: #A14137;
+  position: absolute;
+  top: 0.8em;
+  right: 0.7em;
+  cursor: pointer;
+  border-left: 1px solid #bbb;
+  padding-left: 0.4em;
 }
 
 .cart:hover {
@@ -76,29 +84,37 @@ hr {
 }
 
 .cart img {
-  width        : 1.1em;
-  margin-top   : 0.2em;
-  margin-right : 0.3vw;
+  width: 1.6em;
+  margin-top: 0.3em;
+  margin-right: 0.3vw;
+}
+
+.cart span {
+  font-size: 1.4em;
 }
 
 .logo {
   text-align  : center;
   padding-top : 1em;
+  padding-left: 1em;
 }
 
 .logo img {
-  width     : 18%;
-  min-width : 11em;
+  width     : 28%;
+  min-width : 15em;
 }
 
 .slogan {
   text-align  : center;
   padding-top : 0.6em;
+  text-transform: capitalize;
+  color: #4f4139;
+  font-weight: normal;
 }
 
 .menu {
   text-align    : center;
-  font-size     : 1.2em;
+  font-size     : 1.1em;
   padding-left  : 1em;
   border-bottom : 1px solid #eee;
 }
@@ -110,7 +126,7 @@ hr {
   cursor          : pointer;
   text-decoration : none;
   position        : relative;
-  color           : #5D4A44;
+  color           : #4f4139;
 }
 
 .menu a::before {
@@ -208,10 +224,10 @@ h4 {
 
 .address .one {
   padding   : 1em;
-  max-width : 14.5em;
+  max-width : 15em;
   margin    : auto;
   font-size : 0.9em;
-  color: #6a6362;
+  color     : #6a6362;
 }
 
 .address .schedule {
@@ -228,6 +244,7 @@ h4 {
   margin-bottom : .7em;
   border-bottom : 3px solid #D8AE6E;
   line-height   : 1.4em;
+  color         : #4f4139;
 }
 
 #menu h3 {
@@ -235,7 +252,7 @@ h4 {
   font-weight : 400;
   text-align  : center;
   margin-top  : -0.5em;
-  color       : #aaa;
+  color       : #6a6362;
 }
 
 #menu .item {
@@ -249,8 +266,9 @@ h4 {
 }
 
 #menu .item span {
-  float: right;
-  font-weight: 300;
+  float       : right;
+  font-weight : 300;
+  color       : #6a6362;
 }
 
 #menu .item i {
@@ -259,7 +277,7 @@ h4 {
   display     : block;
   position    : absolute;
   padding-top : 0.2em;
-  color       : #aaa;
+  color       : #6a6362;
 }
 
 #menu .column-group > div {
@@ -326,19 +344,17 @@ input[type="number"] {
   margin-right : 4em;
   border       : 1px solid rgba(161,65,55,0.4);
   padding      : 0.4em;
-  padding-top  : 0.6em;
-  padding-left : 1.4em;
-  font-size    : 0.8em;
+  padding-left : 1.2em;
 }
 
 input[type="button"] {
   text-align  : center;
-  width       : 7.5em;
+  width       : 6.5em;
   background  : #A14137;
   color       : white;
-  padding     : 0.5em;
-  padding-top : 0.7em;
-  font-size   : 0.8em;
+  padding     : 0.3em;
+  padding-top : 0.4em;
+  font-size   : 1.1em;
   border      : 0;
 }
 
@@ -352,7 +368,7 @@ input[type="button"] {
 }
 
 .desc {
-  color: #6a6362;
+  color: #4f4139;
 }
 
 .quantity {
@@ -431,5 +447,14 @@ footer {
   text-align     : center;
   padding-bottom : 1em;
   font-size      : 0.8em;
-  color          : #999;
+  color          : #6a6362;
+}
+
+@media (max-width: 600px) {
+  .social-bar {
+    position       : relative;
+    text-align     : center;
+    margin-right   : 0;
+    padding-bottom : 0;
+  }
 }
